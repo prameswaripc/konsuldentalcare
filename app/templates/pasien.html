@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pasien</h1>
+    <table>
+        <tr>
+            <th>ID Pasien</th>
+            <th>Nama</th>
+            <th>Jenis Kelamin</th>
+            <th>Tanggal Lahir</th>
+            <th>Nomor Handphone</th>
+            <th>Actions</th>
+        </tr>
+        {% for item in allpasienobj%}
+        <tr>
+            <td>PSN{{ item.idpasien }}</item></td>
+            <td>{{ item.namapasien }}</item></td>
+            <td>{{ item.jeniskelaminpasien }}</item></td>
+            <td>{{ item.tanggallahir }}</item></td>
+            <td>{{ item.nohppasien }}</item></td>
+            <td>
+                <a href="{% url 'updatepasien' item.idpasien %}">
+                    <button>Update</button>
+                </a>
+            </td>
+            <td>
+                <a href="{% url 'deletepasien' item.idpasien %}">
+                    <button>Delete</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{% url 'createdatapasien' %}">
+        <button>
+            CREATE DATA
+        </button>
+    </a>
+    <br>
+    <br>
+    <a href="{% url 'home' %}">
+        <button>
+            Home
+        </button>
+    </a>
+</body>
+</html>

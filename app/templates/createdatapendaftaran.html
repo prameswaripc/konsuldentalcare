@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create Data Pendaftaran</h1>
+    <a href="{% url 'pendaftaran' %}">
+        <button>
+            Back
+        </button>
+    </a>
+    <a href="{% url 'home' %}">
+        <button>
+            Home
+        </button>
+    </a>
+    <br>
+    <form action=""method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th>ID Dokter</th>
+            <td>
+                <select name="iddokter" id="" class="form-control">
+                    {% for item in alldokterobj %}
+                    <option value="{{item.iddokter}}">{{item}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>ID Pasien</th>
+            <td>
+                <select name="idpasien" id="" class="form-control">
+                    {% for item in allpasienobj %}
+                    <option value="{{item.idpasien}}">{{item}}</option>
+                    {% endfor %}
+            </td>
+        </tr>
+        <tr>
+            <th>Tanggal Pendaftaran</th>
+            <td>
+                <input type="date" name="tanggalpendaftaran">
+            </td>
+        </tr>
+    </table>
+    <button type="submit">submit</button>
+</body>
+</html>

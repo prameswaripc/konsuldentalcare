@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+</head>
+<body>
+    <h1>Update Data Dokter</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <th>Nama Dokter</th>
+                <td>
+
+                    <input type="text" name="namadokter" value="{{dokter.namadokter}}">
+                </td>
+            </tr>
+            <tr>
+                <th>Nohp Dokter</th>
+                <td>
+                    <input type="number" name="nohpdokter" value="{{dokter.nohpdokter}}">
+                </td>
+                </tr>
+            </table>
+            <button type="submit" >UPDATE</button>
+    </form>
+    <br>
+    <br>
+    <a href="{% url 'dokter' %}">
+        <button>
+            Back
+        </button>
+    </a>
+</body>
+</html>

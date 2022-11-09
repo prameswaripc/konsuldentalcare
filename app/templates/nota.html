@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @page{
+            size: A5;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Nota Pendaftaran</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td>ID Pasien</td>
+                <td>: {{ item.idpasien}}</td>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td>: {{ item.namapasien}}</td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>: {{ item.jeniskelaminpasien}}</td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td>
+                <td>: {{ item.tanggallahir}}</td>
+            </tr>
+            <tr>
+                <td>NO HP</td>
+                <td>: {{ item.nohppasien}}</td>
+            </tr>
+            <tr>
+                <td>Harga Pelayanan</td>
+                <td>: {{pelayanan.hargapelayanan}}</td>
+            </tr>
+            <tr>
+                <td>Total Biaya</td>
+                <td>: {{pelayanan.}} </td>
+            </tr>
+        </tbody>
+        </table>
+</body>
+</html>
